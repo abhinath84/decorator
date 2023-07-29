@@ -13,8 +13,8 @@ function reportableClassDecorator<T extends { new(...args: any[]): object }>(con
   };
 }
 
-@reportableClassDecorator
 @Sealed
+@reportableClassDecorator
 class BugReport {
   type = "report";
 
@@ -24,6 +24,12 @@ class BugReport {
     this.title = t;
   }
 }
+
+Object.defineProperty(BugReport, "sayHello", {
+  value: () => {
+    console.log("Hello World!");
+  }
+});
 
 const bug = new BugReport("Needs dark mode");
 console.log(bug.title); // Prints "Needs dark mode"

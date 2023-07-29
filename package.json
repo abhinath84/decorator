@@ -10,6 +10,7 @@
     "build": "npx tsc -p ./tsconfig.json",
     "postbuild": "copyfiles ./package.json ./dist/",
     "watch": "npx tsc -w -p ./tsconfig.json",
+    "tse": "npx ts-node-esm",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix .",
     "lint:gitlab": "set ESLINT_CODE_QUALITY_REPORT=eslint-gitlab-report.json && npx eslint --format gitlab .",
@@ -29,6 +30,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-formatter-gitlab": "^5.0.0",
     "eslint-plugin-import": "^2.27.5",
+    "ts-node": "^10.9.1",
     "tslib": "^2.6.1",
     "typescript": "^5.1.6"
   }

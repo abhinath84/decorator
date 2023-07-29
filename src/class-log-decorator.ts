@@ -125,6 +125,18 @@ class SampleClass {
     this.someProperty = prop;
   }
 
+  set Some(val: string) {
+    this.someProperty = val;
+  }
+
+  get Some() {
+    return (this.someProperty);
+  }
+
+  static someStaticMethod() {
+    console.log("some static method");
+  }
+
   // eslint-disable-next-line class-methods-use-this
   someMethod(a: number, b: number): number {
     return a + b;
