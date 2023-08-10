@@ -133,6 +133,12 @@ class SampleClass {
     return (this.someProperty);
   }
 
+  method(str: string): void {
+    console.log(`Before: ${this.someProperty}`);
+    this.someProperty = str;
+    console.log(`After: ${this.someProperty}`);
+  }
+
   static someStaticMethod() {
     console.log("some static method");
   }
@@ -150,8 +156,9 @@ class SampleClass {
 
 // Usage of the decorated class
 const sampleInstance = new SampleClass("Sample Property");
-sampleInstance.someMethod(2, 3); // Output will log method call details and return 5
-sampleInstance.anotherMethod("John"); // Output will log method call details and return 'Hello, John!'
+sampleInstance.method("========================");
+console.log(sampleInstance.someMethod(2, 3)); // Output will log method call details and return 5
+console.log(sampleInstance.anotherMethod("John")); // Output will log method call details and return 'Hello, John!'
 
 // function logMethodCall(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
 //   console.log(`Calling method ${propertyKey}`);

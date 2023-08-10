@@ -39,12 +39,12 @@ export function Logger(prefix: string) {
       }
 
       if (typeof originalMethod === "function") {
-        // eslint-disable-next-line no-param-reassign, @typescript-eslint/no-explicit-any
-        constructor.prototype[propertyName] = (...args: any[]) => {
+        // eslint-disable-next-line no-param-reassign, @typescript-eslint/no-explicit-any, func-names
+        constructor.prototype[propertyName] = function (...args: any[]) {
           console.log(`[${prefix}] Enter to method: ${propertyName}`);
 
           // Call the original method with the provided arguments
-          const result = originalMethod.apply(constructor, args);
+          const result = originalMethod.apply(this, args);
 
           console.log(`[${prefix}] Exit from method ${propertyName}`);
 
