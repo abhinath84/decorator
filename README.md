@@ -1,4 +1,17 @@
-# `experimentalDecorators`
+| NOTE:            |
+| :--------------- |
+| Work in progress |
+
+**Table of Contents**
+
+- [syntax](#syntax)
+
+<div align="center">
+  <h1>TS Decorator</h1>
+  <p>Example of Typescript Decorator</p>
+</div>
+
+## syntax
 
 | What you’re decorating        | `experimentalDecorators`                                                                                                     | TS 5.0                                       |
 | :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------- |
